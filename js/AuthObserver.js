@@ -24,11 +24,13 @@ $(function(){
        });
        
        $("#register-btn").click(function () {
-           if($("#fio").hasClass("error")) {
+           if($("#fio").hasClass("error") || $("#fio").val() === "") {
+               alert("You passed fio field!");
                $("#fio").focus();
                return;
            }
-           if($("#email").hasClass("error")) {
+           if($("#email").hasClass("error") || $("#email").val() === "") {
+               alert("You passed email field!");
                $("#email").focus();
                return;
            }
